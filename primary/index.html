@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex容器的6个属性</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    h2{
+      margin-top: 32px;
+    }
+    h3{
+      margin-top: 16px;
+      color: tomato;
+    }
+    p{
+      background: #f6f8fa;
+      padding: 16px;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+    .box{
+      display: flex;
+      margin-top: 4px;
+    }
+    .box div{
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background: paleturquoise;
+      text-align: center;
+      color: #333;
+      border: 1px solid;
+    }
+
+    .flex-direction1{
+      flex-direction: row;
+    }
+    .flex-direction2{
+      flex-direction: row-reverse;
+    }
+    .flex-direction3{
+      flex-direction: column;
+    }
+    .flex-direction4{
+      flex-direction: column-reverse;
+    }
+
+    .flex-wrap1{
+      flex-wrap: nowrap;
+    }
+    .flex-wrap2{
+      flex-wrap: wrap;
+    }
+    .flex-wrap3{
+      flex-wrap: wrap-reverse;
+    }
+  </style>
+</head>
+<body>
+  <h1>flex容器的6个属性</h1>
+  <h2>flex-direction: row | row-reverse | column | column-reverse;</h2>
+  <p>
+    flex-direction: 决定主轴的方向（即项目的排列方向）<br>
+    row（默认值）：主轴为水平方向，起点在左端。<br>
+    row-reverse：主轴为水平方向，起点在右端。<br>
+    column：主轴为垂直方向，起点在上沿。<br>
+    column-reverse：主轴为垂直方向，起点在下沿。
+  </p>
+  <h3>flex-direction: row</h3>
+  <div class='flex-direction1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>flex-direction: row-reverse</h3>
+  <div class='flex-direction2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>flex-direction: column</h3>
+  <div class='flex-direction3 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>flex-direction: column-reverse</h3>
+  <div class='flex-direction4 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>flex-wrap: nowrap | wrap | wrap-reverse;</h2>
+  <p>
+    默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。<br>
+    nowrap（默认）：不换行<br>
+    wrap：换行，第一行在上方<br>
+    wrap-reverse：换行，第一行在下方
+  </p>
+  <h3>flex-wrap: nowrap</h3>
+  <div class='flex-wrap1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>flex-wrap: wrap</h3>
+  <div class='flex-wrap2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>flex-wrap: wrap-reverse</h3>
+  <div class='flex-wrap3 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+</body>
+</html>

@@ -17,6 +17,10 @@
       margin-top: 16px;
       color: tomato;
     }
+    .imp{
+      color: red;
+      text-decoration: underline;
+    }
     p{
       background: #f6f8fa;
       padding: 16px;
@@ -58,6 +62,67 @@
     }
     .flex-wrap3{
       flex-wrap: wrap-reverse;
+    }
+
+    .flex-flow1{
+      flex-flow: row-reverse wrap-reverse;
+    }
+    
+    .justify-content1{
+      justify-content: flex-start;
+    }
+    .justify-content2{
+      justify-content: flex-end;
+    }
+    .justify-content3{
+      justify-content: center;
+    }
+    .justify-content4{
+      justify-content: space-between;
+    }
+    .justify-content5{
+      justify-content: space-around;
+    }
+
+    .align-items1{
+      align-items: flex-start;
+    }
+    .align-items2{
+      align-items: flex-end;
+    }
+    .align-items3{
+      align-items: center;
+    }
+    .align-items4{
+      align-items: baseline;
+    }
+    .align-items5{
+      align-items: stretch;
+    }
+    
+    .align-content1{
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .align-content2{
+      align-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .align-content3{
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    .align-content4{
+      align-content: space-between;
+      flex-wrap: wrap;
+    }
+    .align-content5{
+      align-content: space-around;
+      flex-wrap: wrap;
+    }
+    .align-content6{
+      align-content: stretch;
+      flex-wrap: wrap;
     }
   </style>
 </head>
@@ -149,6 +214,246 @@
   </div>
   <h3>flex-wrap: wrap-reverse</h3>
   <div class='flex-wrap3 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+
+  <h2>flex-flow: flex-direction || flex-wrap;</h2>
+  <p class='imp'>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap</p>
+  <h3>flex-flow: row-reverse wrap-reverse === flex-direction: row-reverse;flex-wrap: wrap-reverse;</h3>
+  <div class='flex-flow1 box'>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+  </div>
+  
+  <h2>justify-content: flex-start | flex-end | center | space-between | space-around;</h2>
+  <p>
+    justify-content属性定义了项目在主轴上的对齐方式。<br>
+    flex-start（默认值）：左对齐<br>
+    flex-end：右对齐<br>
+    center： 居中<br>
+    space-between：两端对齐，项目之间的间隔都相等。<br>
+    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+  </p>
+  <h3>justify-content: flex-start</h3>
+  <div class='justify-content1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>justify-content: flex-end</h3>
+  <div class='justify-content2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>justify-content: center</h3>
+  <div class='justify-content3 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>justify-content: space-between</h3>
+  <div class='justify-content4 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <h3>justify-content: space-around</h3>
+  <div class='justify-content5 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>align-items: flex-start | flex-end | center | baseline | stretch;</h2>
+  <p>
+    align-items属性定义项目在交叉轴上如何对齐。垂直轴<br>
+    flex-start：交叉轴的起点对齐。<br>
+    flex-end：交叉轴的终点对齐。<br>
+    center：交叉轴的中点对齐。<br>
+    baseline: 项目的第一行文字的基线对齐。<br>
+    stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。<br>
+  </p>
+  <h3>align-items: flex-start</h3>
+  <div class='align-items1 box'>
+    <div>1</div>
+    <div style="height: 120px;">2</div>
+    <div style="height: 220px;">3</div>
+    <div style="height: 70px;">4</div>
+    <div style="height: 180px;">5</div>
+  </div>
+  <h3>align-items: flex-end</h3>
+  <div class='align-items2 box'>
+    <div>1</div>
+    <div style="height: 120px;">2</div>
+    <div style="height: 220px;">3</div>
+    <div style="height: 70px;">4</div>
+    <div style="height: 180px;">5</div>
+  </div>
+  <h3>align-items: center</h3>
+  <div class='align-items3 box'>
+    <div>1</div>
+    <div style="height: 120px;">2</div>
+    <div style="height: 220px;">3</div>
+    <div style="height: 70px;">4</div>
+    <div style="height: 180px;">5</div>
+  </div>
+  <h3>align-items: baseline</h3>
+  <div class='align-items4 box'>
+    <div>1</div>
+    <div style="height: 120px;">2</div>
+    <div style="height: 220px;">3</div>
+    <div style="height: 70px;">4</div>
+    <div style="height: 180px;">5</div>
+  </div>
+  <h3>align-items: stretch</h3>
+  <div class='align-items5 box' style='height: 400px;'>
+    <div style='height: auto;'>1</div>
+    <div style='height: auto;'>2</div>
+    <div style='height: auto;'>3</div>
+    <div style='height: auto;'>4</div>
+    <div style='height: auto;'>5</div>
+  </div>
+
+  <h2>align-content: flex-start | flex-end | center | space-between | space-around | stretch;</h2>
+  <p>
+    align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<br>
+    flex-start：与交叉轴的起点对齐。<br>
+    flex-end：与交叉轴的终点对齐。<br>
+    center：与交叉轴的中点对齐。<br>
+    space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。<br>
+    space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。<br>
+    stretch（默认值）：轴线占满整个交叉轴。
+  </p>
+  <h3>align-content: flex-start</h3>
+  <div class='align-content1 box' style='height: 500px;background: #ffc107;'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>align-content: flex-end</h3>
+  <div class='align-content2 box' style='height: 500px;background: #ffc107;'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>align-content: center</h3>
+  <div class='align-content3 box' style='height: 500px;background: #ffc107;'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>align-content: space-between</h3>
+  <div class='align-content4 box' style='height: 500px;background: #ffc107;'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>align-content: space-around</h3>
+  <div class='align-content5 box' style='height: 500px;background: #ffc107;'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+  <h3>align-content: stretch</h3>
+  <div class='align-content6 box' style='height: 500px;background: #ffc107;'>
     <div>1</div>
     <div>2</div>
     <div>3</div>

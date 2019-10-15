@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>item</title>
+  <style>
+  *{
+      margin: 0;
+      padding: 0;
+    }
+    h2{
+      margin-top: 32px;
+    }
+    h3{
+      margin-top: 16px;
+      color: tomato;
+    }
+    .imp{
+      color: red;
+      text-decoration: underline;
+    }
+    p{
+      background: #f6f8fa;
+      padding: 16px;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+    .box{
+      display: flex;
+      margin-top: 4px;
+    }
+    .box div{
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background: paleturquoise;
+      text-align: center;
+      color: #333;
+      border: 1px solid;
+    }
+
+    .order div:nth-child(1){
+      order: 2;
+    }
+    .order div:nth-child(2){
+      order: 4;
+    }
+    .order div:nth-child(3){
+      order: 1;
+    }
+    .order div:nth-child(4){
+      order: 5;
+    }
+    .order div:nth-child(5){
+      order: 3;
+    }
+
+    .flex-grow1 div:nth-child(1){
+      flex-grow: 1;
+      background: gold;
+    }
+    .flex-grow2 div:nth-child(1){
+      flex-grow: 2;
+      background: gold;
+    }
+    .flex-grow2 div:nth-child(3){
+      flex-grow: 1;
+      background: slateblue;
+    }
+    .flex-grow2 div:nth-child(4){
+      flex-grow: 1;
+      background: slateblue;
+    }
+
+    .flex-shrink1 div, .flex-shrink2 div{
+      width: 300px;
+    }
+    .flex-shrink1 div:nth-child(1){
+      flex-shrink: 3;
+      background: gold;
+    }
+    .flex-shrink2 div:nth-child(1){
+      flex-shrink: 0;
+      background: gold;
+    }
+
+    .flex-basis div:nth-child(1){
+      flex-basis: 400px;
+      background: gold;
+    }
+
+    .flex1 div:nth-child(1){
+      flex: 1;
+      background: gold;
+    }
+    .flex2 div{
+      width: 160px;
+    }
+    .flex2 div:nth-child(1){
+      flex: 1 2 400px;
+      background: gold;
+    }
+
+    .align-self1 div:nth-child(3) {
+      align-self: flex-end;
+      background: gold;
+    }
+    .align-self2 div:nth-child(3) {
+      align-self: center;
+      background: gold;
+    }
+    .align-self3 div:nth-child(3) {
+      align-self: baseline;
+      background: gold;
+    }
+    .align-self4{
+      height: 500px;
+    }
+    .align-self4 div:nth-child(3) {
+      align-self: stretch;
+      background: gold;
+    }
+  </style>
+</head>
+<body>
+  <h1>flex“项目”的6个属性</h1>
+  <h2>order: integer;</h2>
+  <p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+  <div class='order box'>
+    <div>2</div>
+    <div>4</div>
+    <div>1</div>
+    <div>5</div>
+    <div>3</div>
+  </div>
+
+  <h2>flex-grow: number; /* default 0 */</h2>
+  <p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
+  <div class='flex-grow1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+  <div class='flex-grow2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>flex-shrink: number; /* default 1 */</h2>
+  <h3>负值对该属性无效。</h3>
+  <p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+  <div class='flex-shrink1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+  <div class='flex-shrink2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>flex-basis: length | auto; /* default auto */</h2>
+  <h3>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</h3>
+  <p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+  <div class='flex-basis box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>flex: none | [ 'flex-grow' 'flex-shrink' 'flex-basis' ]</h2>
+  <h3>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</h3>
+  <p>
+    该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>
+    建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+  </p>
+  <div class='flex1 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  <div class='flex2 box'>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+  <h2>align-self: auto | flex-start | flex-end | center | baseline | stretch;</h2>
+  <p>
+    align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。<br>
+    该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
+  </p>
+  <h3>align-self: flex-end</h3>
+  <div class='align-self1 box'>
+    <div style='height: 216px'>1</div>
+    <div style='height: 333px'>2</div>
+    <div style='height: auto'>3</div>
+    <div style='height: 432px'>4</div>
+    <div style='height: 108px'>5</div>
+  </div>
+  <h3>align-self: center</h3>
+  <div class='align-self2 box'>
+    <div style='height: 216px'>1</div>
+    <div style='height: 333px'>2</div>
+    <div style='height: auto'>3</div>
+    <div style='height: 432px'>4</div>
+    <div style='height: 108px'>5</div>
+  </div>
+  <h3>align-self: baseline</h3>
+  <div class='align-self3 box'>
+    <div style='height: 216px'>1</div>
+    <div style='height: 333px'>2</div>
+    <div style='height: auto'>3</div>
+    <div style='height: 432px'>4</div>
+    <div style='height: 108px'>5</div>
+  </div>
+  <h3>align-self: stretch</h3>
+  <div class='align-self4 box'>
+    <div style='height: 216px'>1</div>
+    <div style='height: 333px'>2</div>
+    <div style='height: auto'>3</div>
+    <div style='height: 432px'>4</div>
+    <div style='height: 108px'>5</div>
+  </div>
+</body>
+</html>
